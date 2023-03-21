@@ -19,9 +19,13 @@ def analyze_log(path_to_file):
             1 for order in orders if order[0] == 'arnaldo'
             and order[1] == 'hamburguer')
 
-        joao_ordered_items = {order[1] for order in orders if order[0] == 'joao'}
+        joao_ordered_items = {
+            order[1] for order in orders if order[0] == 'joao'
+        }
         joao_never_ordered_items = items - joao_ordered_items
-        joao_ordered_days = {order[2] for order in orders if order[0] == 'joao'}
+        joao_ordered_days = {
+            order[2] for order in orders if order[0] == 'joao'
+        }
         days_joao_never_ordered = days - joao_ordered_days
 
         maria_items = [item for item in orders if item[0] == 'maria']
